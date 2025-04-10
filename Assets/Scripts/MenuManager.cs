@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 public class MenuManager : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class MenuManager : MonoBehaviour
 
     void CargarJuego()
     {
-        Application.LoadLevel("Game");  
+        SceneManager.LoadScene("Game");
     }
 
     void CerrarJuego()

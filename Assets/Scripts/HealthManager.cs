@@ -39,7 +39,7 @@ public class HealthManager : MonoBehaviour
 
     void ReiniciarNivel()
     {
-        GameManager gm = FindObjectOfType<GameManager>();
+        GameManager gm = FindFirstObjectByType<GameManager>();
         if (gm != null)
         {
             gm.TerminarNivel();  

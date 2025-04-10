@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,14 +27,8 @@ public class PlayerController : MonoBehaviour
         Vector3 position = transform.position;
         transform.position = new Vector3(velocidadX + position.x, position.y, position.z);
 
-        if (Input.GetKeyDown(KeyCode.Space) && saltosDisponibles > 0)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-            rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
-            saltosDisponibles--;
-        }
-
         VerificarSiTocaSuelo();
+
     }
 
     void VerificarSiTocaSuelo()
@@ -76,5 +73,30 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
 
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.performed && saltosDisponibles > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); 
+            rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
+            saltosDisponibles--;
+        }
+    }
+    public void OnColorLeft(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            GetComponent<ColorController>().CambiarColorIzquierda();
+        }
+    }
+
+    public void OnColorRight(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            GetComponent<ColorController>().CambiarColorDerecha();
+        }
     }
 }

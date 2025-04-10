@@ -1,5 +1,129 @@
 {
     "name": "MainImput",
-    "maps": [],
+    "maps": [
+        {
+            "name": "Game",
+            "id": "3a186a8b-29f5-4064-aadf-f7117a35fcba",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "15c52cf8-fb25-4fcd-bc67-ad47050f607f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Changecolorleft",
+                    "type": "Button",
+                    "id": "91ef0094-208d-4dc8-8772-49eb9ecef38a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "changecolorright",
+                    "type": "Button",
+                    "id": "e6a90ff8-6867-4b21-865c-bd55f4e13397",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "22bd8409-d08b-478e-9d2e-ac23896f1eeb",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eaa175bb-14e8-4050-bba4-66309d6e55fe",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d0389292-efa6-42eb-9ec1-b934ddee347f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2770926d-ff28-4f10-8602-793e46a9080f",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2a0cd73-e1cd-4032-b5e8-282f8b927afa",
+                    "path": "<Keyboard>/o",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Changecolorleft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0789f5bd-684e-4e8e-9744-5bce58d6afe9",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "Press,Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Changecolorleft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "638cd845-144a-49fc-83da-fde487e85cf3",
+                    "path": "<Keyboard>/p",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "changecolorright",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd4517a0-aa4f-421c-9bd8-9bc7aec373a2",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "changecolorright",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
     "controlSchemes": []
 }

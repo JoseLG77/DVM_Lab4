@@ -22,10 +22,6 @@ public class GameManager : MonoBehaviour
     {
         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
         playerController = player.GetComponent<PlayerController>();
-
-        yellowButton.onClick.AddListener(CambiarColorAmarillo);
-        redButton.onClick.AddListener(CambiarColorRojo);
-        greenButton.onClick.AddListener(CambiarColorVerde);
     }
 
     void Update()
@@ -52,24 +48,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("TiempoNivel", tiempoTranscurrido);
 
         SceneManager.LoadScene("Results");
-    }
-
-    void CambiarColorAmarillo()
-    {
-        if (!playerController.EstaColisionandoConObstaculo)
-            playerSpriteRenderer.color = Color.yellow;
-    }
-
-    void CambiarColorRojo()
-    {
-        if (!playerController.EstaColisionandoConObstaculo)
-            playerSpriteRenderer.color = Color.red;
-    }
-
-    void CambiarColorVerde()
-    {
-        if (!playerController.EstaColisionandoConObstaculo)
-            playerSpriteRenderer.color = Color.green;
     }
 
 }
